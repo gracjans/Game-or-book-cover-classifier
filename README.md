@@ -21,7 +21,7 @@ Just drop any cover picture from the internet, or upload it from your disc and c
 ![demo](https://user-images.githubusercontent.com/77151129/153781706-4036fc2b-0f08-4be4-897b-9e6983dd7d50.PNG)
 
 ## Brief summary
-The model created classified computer game covers from book covers with an accuracy of over 82% on the test set. Accuracy on the test set was over 92%. An important element in improving the prediction accuracy on the test set was the addition of a dropout layer after each of the dense layers, as there is a strong tendency for the training set to memorize each of the cover, not to generalize. I consider this a pretty good result considering how small the dataset was.
+The model created classified computer game covers from book covers with an accuracy of over 82% on the test set. Accuracy on the training set was over 92% (due to lack of data model is overfitting). An important element in improving the prediction accuracy on the test set was the addition of a dropout layer after each of the dense layers, as there is a strong tendency for the training set to memorize each of the cover, not to generalize. I consider this a pretty good result considering how small the dataset was.
 
 ## Technologies
 Project was created using:
