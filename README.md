@@ -8,8 +8,7 @@ In this project, I created and trained a neural network to classify computer gam
 For dataset used, I downloaded the covers from various sources and combined them together. I created the labels directly in the notebook.
 The dataset contained a total of 3400 cover images, 1700 for each of the two classes.
 
-Covers dataset can be found directly on this repository in the 'data' folder, or on google drive here:
-https://drive.google.com/drive/folders/123cqUNCWFNKFnlV-sa4onJj-wrneWRiX?usp=sharing
+Covers dataset can be found directly on this repository in the 'data' folder.
 
 ## Model demo
 You can try to make a prediction yourself using this model, as it has been deployed on hugging face spaces here:
