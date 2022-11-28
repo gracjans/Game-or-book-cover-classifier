@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
-model = load_model('game-or-book-cover-model.h5')
+model = load_model('./models/game-or-book-cover-model.h5')
 
 labels = ['Game', 'Book']
 
@@ -19,7 +19,7 @@ def classify_image(cover):
 cover = gr.inputs.Image(shape=(width, height), label='Upload cover image to classify')
 label = gr.outputs.Label(label='Model prediction')
 
-examples = ['fifa15.jpg', 'lotr.jpg', 'gta.jpg', 'sapiens.jpg', 'life3.jpg', 'fastai.jpg']
+examples = ['./examples/fifa15.jpg', './examples/lotr.jpg', './examples/gta.jpg', './examples/sapiens.jpg', './examples/life3.jpg', './examples/fastai.jpg']
 
 interface = gr.Interface(fn=classify_image, 
              inputs=cover, 
@@ -30,4 +30,4 @@ interface = gr.Interface(fn=classify_image,
              examples=examples,
              allow_flagging="never")
 
-interface.launch()
+interface.launch(server_name="0.0.0.0", server_port=8080)

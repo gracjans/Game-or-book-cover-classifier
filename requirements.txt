@@ -1,5 +1,5 @@
+gradio
 numpy
-matplotlib
 opencv-python
 scikit-learn
 tensorflow

@@ -22,6 +22,29 @@ Just drop any cover picture from the internet, or upload it from your disc and c
 ## Brief summary
 The model created, classified computer game covers from book covers with an accuracy of over 82% on the test set. Accuracy on the training set was over 92% (due to lack of data model is overfitting). An important element in improving the prediction accuracy on the test set was the addition of a dropout layer after each of the dense layers, as there is a strong tendency for the training set to memorize each of the cover, not to generalize. I consider this a pretty good result considering how small the dataset was.
 
+## Dockerize app
+Build image
+```sh
+docker build -t gradio:latest -f .\Dockerfile.app .
+```
+
+Run the container in a detached mode
+```sh
+docker run -d -v $pwd/models:/app/models -p 8080:8080 gradio:latest
+```
+
+You should now be able to access app at http://localhost:8080
+
+Stop the containter
+```sh
+docker stop "YOUR CONTAINER ID"
+```
+
+To get running container id
+```sh
+docker ps
+```
+
 ## Technologies
 Project was created using:
 * cv2
